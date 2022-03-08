@@ -1,0 +1,130 @@
+$itemMaxWidth: 800px;
+$width: 320px;
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-item-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 8px;
+  margin: 8px;
+  max-width: $itemMaxWidth;
+
+  [type="text"] {
+    padding: 12px 4px;
+    margin: 4px 8px;
+  }
+
+  [type="checkbox"] {
+    cursor: pointer;
+    // border: 2px gray solid;
+  }
+
+  button {
+    cursor: pointer;
+    padding: 8px 8px;
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    font-weight: 700px;
+    border-radius: 12px;
+    border: 2px solid red;
+    opacity: 0.7;
+  }
+
+  button:hover {
+    opacity: 1.2;
+  }
+
+  .item-status {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    .status-text {
+      font-weight: 700;
+    }
+  }
+}
+
+.item-done {
+  background-color: #4480c7;
+}
+
+.todo-add-wrapper {
+  max-width: $itemMaxWidth;
+}
+
+.todo-filter-wrapper {
+  width: $width;
+  // text-align: left;
+  display: flex;
+  flex-direction: row;
+  padding: 8px 0;
+  margin: 8px 0;
+
+  label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  select {
+    cursor: pointer;
+    padding: 12px 4px;
+    margin: 4px 8px;
+  }
+}
+
+.todo-add-wrapper {
+  width: $width;
+  padding: 12px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  [type="text"] {
+    flex: 1;
+    padding: 12px 4px;
+    margin: 4px 4px;
+  }
+
+  button {
+    cursor: pointer;
+    padding: 16px 8px;
+    background-color: rgba(28, 130, 37, 0.961);
+    color: white;
+    font-size: 16px;
+    font-weight: 700px;
+    border-radius: 12px;
+    border: 2px solid rgba(28, 130, 37, 0.961);
+    opacity: 0.7;
+  }
+
+  button:hover {
+    opacity: 1.2;
+  }
+}
+
+.explaination-wrapper {
+  font-size: 12px;
+  line-height: 2;
+  padding: 8px 0px;
+  max-width: $itemMaxWidth;
+  font-style: italic;
+  transition: ease-in all 0.7s;
+
+  &:hover {
+    font-weight: 900;
+    font-size: 16px;
+    color: #4480c7;
+  }
+}
