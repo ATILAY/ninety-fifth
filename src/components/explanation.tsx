@@ -1,6 +1,6 @@
-export default function Explaination() {
+export default function Explanation() {
   return (
-    <div className="explaination-wrapper">
+    <div className="explanation-wrapper">
       This project consists of ReactJS, Redux, Redux Thunk, Typescript and Local
       Storage Handling. You can add your tasks, and mark them as finished or
       not. You can filter your tasks via dropdown. And change their contents or

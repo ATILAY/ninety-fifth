@@ -1,5 +1,7 @@
 $itemMaxWidth: 800px;
 $width: 320px;
+$appRadius: 20px;
+$appBlue:#4480c7;
 
 .App {
   text-align: center;
@@ -10,6 +12,8 @@ $width: 320px;
 }
 
 .todo-item-wrapper {
+  border: 1px dashed;
+  border-radius: $appRadius;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -24,7 +28,6 @@ $width: 320px;
 
   [type="checkbox"] {
     cursor: pointer;
-    // border: 2px gray solid;
   }
 
   button {
@@ -33,7 +36,7 @@ $width: 320px;
     background-color: red;
     color: white;
     font-size: 16px;
-    font-weight: 700px;
+    font-weight: bold;
     border-radius: 12px;
     border: 2px solid red;
     opacity: 0.7;
@@ -51,13 +54,30 @@ $width: 320px;
     cursor: pointer;
 
     .status-text {
-      font-weight: 700;
+      font-weight: bold;
     }
   }
 }
 
 .item-done {
-  background-color: #4480c7;
+  background-color: $appBlue;
+  border-color: $appBlue;
+}
+
+.todo-add-upper-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  .todo-add-warning-wrapper {
+    text-align: start;
+    margin-left: 4px;
+    margin-top: -4px;
+    margin-bottom: 8px;
+
+    font-style: italic;
+    font-weight: bold;
+    font-size: 14px;
+  }
 }
 
 .todo-add-wrapper {
@@ -66,7 +86,6 @@ $width: 320px;
 
 .todo-filter-wrapper {
   width: $width;
-  // text-align: left;
   display: flex;
   flex-direction: row;
   padding: 8px 0;
@@ -85,7 +104,7 @@ $width: 320px;
 }
 
 .todo-add-wrapper {
-  width: $width;
+  width: 345px;
   padding: 12px 0px;
   display: flex;
   flex-direction: row;
@@ -103,7 +122,7 @@ $width: 320px;
     background-color: rgba(28, 130, 37, 0.961);
     color: white;
     font-size: 16px;
-    font-weight: 700px;
+    font-weight: bold;
     border-radius: 12px;
     border: 2px solid rgba(28, 130, 37, 0.961);
     opacity: 0.7;
@@ -112,19 +131,29 @@ $width: 320px;
   button:hover {
     opacity: 1.2;
   }
+
+  button:disabled {
+    cursor:not-allowed;
+  }
 }
 
-.explaination-wrapper {
+.explanation-wrapper {
   font-size: 12px;
   line-height: 2;
-  padding: 8px 0px;
+  padding: 12px;
   max-width: $itemMaxWidth;
   font-style: italic;
   transition: ease-in all 0.7s;
 
   &:hover {
-    font-weight: 900;
-    font-size: 16px;
-    color: #4480c7;
+    color: white;
+    background-color: $appBlue;
+    border-bottom-left-radius: $appRadius;
+    border-bottom-right-radius: $appRadius;
+
   }
+}
+
+ul {
+  padding-left: 0;
 }

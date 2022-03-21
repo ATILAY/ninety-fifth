@@ -4,13 +4,13 @@ import TodoList from "./components/TodoList";
 
 import store from "./store/store";
 import "./App.scss";
-import Explaination from "./components/explaination";
+import Explanation from "./components/explanation";
 
 function App() {
   return (
     <div className="App">
       <Provider store={store}>
-        <Explaination/>
+        <Explanation/>
         <TodoList />
       </Provider>
     </div>
@@ -18,4 +18,3 @@ function App() {
 }
 
 export default App;
-// d1

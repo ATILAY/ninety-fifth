@@ -25,9 +25,9 @@ export default function TodoListItems({ filterValue }: localProps) {
   const dispatch = useDispatch();
 
   return (
-    <>
+    <ul>
       {todos.map((todo: { id: number; text: string; done: boolean }) => (
-        <div
+        <li
           className={`todo-item-wrapper ${todo.done ? "item-done" : ""}`}
           key={todo.id}
         >
@@ -43,11 +43,11 @@ export default function TodoListItems({ filterValue }: localProps) {
           <input
             type="text"
             value={todo.text}
-            onChange={(evt) => dispatch(updateTodo(todo.id, evt.target.value))}
+            onChange={(e) => dispatch(updateTodo(todo.id, e.target.value))}
           />
           <button onClick={() => dispatch(deleteTodo(todo.id))}>Delete</button>
-        </div>
+        </li>
       ))}
-    </>
+    </ul>
   );
 }
